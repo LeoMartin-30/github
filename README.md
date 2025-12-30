@@ -1,4 +1,3 @@
 # Léo Martin - Portfolio
 
-My personal slice of the internet.
-This site was handwritten by a human named Léo, with some help from the LLM named Claude. We are not the same person (yet).
+My personal slice of the internet. A single HTML file portfolio website with Tailwind CSS styling. Just open `index.html` in your browser - no build steps, no dependencies, no nonsense.
