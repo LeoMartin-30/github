@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Léo Martin | AI & Automation Engineer</title>
+    
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: '#F4F1EA',
+              charcoal: '#282828',
+              terracotta: '#C17F59',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #F4F1EA;
+        color: #282828;
+      }
+      /* Custom dashed border for the news box */
+      .dashed-box {
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='0' ry='0' stroke='%23282828' stroke-width='2' stroke-dasharray='8%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+        padding: 1.5rem;
+      }
+      
+      a {
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      a:hover {
+        color: #C17F59;
+      }
+      
+      /* Link arrow animation */
+      .link-arrow {
+        display: inline-block;
+        transition: transform 0.2s;
+      }
+      a:hover .link-arrow {
+        transform: translateX(-4px);
+        color: #C17F59;
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #F4F1EA; }
+      ::-webkit-scrollbar-thumb { background: #D4D1CA; }
+      ::-webkit-scrollbar-thumb:hover { background: #C17F59; }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="antialiased font-sans selection:bg-terracotta selection:text-white">
+    
+    <div class="max-w-7xl mx-auto px-6 py-12 md:py-20">
+      
+      <!-- Grid Layout: 1 col mobile, 12 cols desktop -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-16">
+        
+        <!-- Left Column (Profile & Contact) - Spans 3 cols -->
+        <div class="md:col-span-3 flex flex-col gap-6">
+          <!-- Photo Area -->
+          <!-- 
+            RECOMMENDATION: Replace 'profile.jpg' with a real photo.
+            Style Tip: Black & White or desaturated warm colors work best with this palette.
+          -->
+          <div class="w-full aspect-[4/5] bg-charcoal/10 relative overflow-hidden group rounded-sm">
+             <img 
+              src="profile.jpg" 
+              alt="Léo Martin" 
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+              class="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
+             />
+             <!-- Fallback if no image found -->
+             <div class="absolute inset-0 hidden items-center justify-center bg-charcoal/5 text-charcoal/20">
+                <span class="font-serif italic text-6xl">LM</span>
+             </div>
+          </div>
+          
+          <div class="text-left">
+            <h1 class="font-sans font-black text-4xl md:text-5xl tracking-tight leading-none mb-2">
+              Léo<br>Martin
+            </h1>
+            <p class="font-serif italic text-lg text-terracotta mt-2">
+              AI & Automation Engineer
+            </p>
+            
+            <div class="mt-6 font-mono text-sm opacity-70 space-y-1">
+               <p>leo.martin[at]malt.com</p>
+               <p>paris[fr]</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center Column (Main Content) - Spans 6 cols -->
+        <div class="md:col-span-6 flex flex-col gap-12">
+          
+          <!-- About / Intro -->
+          <div>
+            <h2 class="font-sans font-black text-2xl mb-6">About.</h2>
+            <p class="font-serif text-xl leading-relaxed mb-4">
+              Bridging the gap between raw data and <span class="text-terracotta italic">human adoption</span>.
+            </p>
+            <p class="text-lg leading-relaxed text-charcoal/80">
+              Engineered at Centrale Nantes, refined at Harvard, and currently scaling AI at Malt. I scope, build, and deploy AI agents that actually work for people.
+            </p>
+          </div>
+
+          <!-- Experience List -->
+          <div class="space-y-8">
+            <div class="space-y-2">
+              <h3 class="font-sans font-black text-xl">
+                Since 2024: AI & Automation Engineer @ Malt.
+              </h3>
+              <p class="text-charcoal/80 leading-relaxed">
+                Leading internal GenAI deployment. Scoping, building, and deploying AI agents while training 100% of non-tech staff on adoption.
+              </p>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="font-sans font-black text-xl">
+                2023 - 2024: Graduate Program @ Malt.
+              </h3>
+              <p class="text-charcoal/80 leading-relaxed">
+                Rotations in Growth & Community. Focused on data-driven monitoring, GTM strategies for freelance programs, and AI sales empowerment.
+              </p>
+            </div>
+            
+             <div class="space-y-2">
+              <h3 class="font-sans font-black text-xl">
+                2022 - 2023: Key Account Manager @ Qonto.
+              </h3>
+              <p class="text-charcoal/80 leading-relaxed">
+                 Managed client portfolios and developed feedback loops between Sales and Product teams.
+              </p>
+            </div>
+          </div>
+
+          <!-- Projects Section -->
+          <div class="space-y-8">
+            <h2 class="font-sans font-black text-2xl">Projects.</h2>
+            
+            <div class="group">
+              <a href="https://github.com/LeoMartin-30" target="_blank" class="block">
+                <h3 class="font-sans font-bold text-lg group-hover:text-terracotta transition-colors inline-flex items-center gap-2">
+                  Strava Data Analysis
+                  <span class="text-xs font-mono font-normal opacity-50 border border-charcoal/20 px-1 rounded">Code</span>
+                </h3>
+                <p class="text-charcoal/80 mt-1">
+                  Exploratory data analysis of running patterns and performance metrics.
+                </p>
+              </a>
+            </div>
+
+            <div class="group">
+              <div class="block">
+                <h3 class="font-sans font-bold text-lg inline-flex items-center gap-2">
+                  AI Transcription Tool
+                  <span class="text-xs font-mono font-normal text-terracotta border border-terracotta/30 bg-terracotta/10 px-1 rounded animate-pulse">Building</span>
+                </h3>
+                <p class="text-charcoal/80 mt-1">
+                  A local-first transcription agent designed to automate meeting notes and extract action items securely.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dashed News Box -->
+          <div class="dashed-box mt-4 relative group hover:bg-white/40 transition-colors">
+            <h3 class="font-sans font-black text-2xl mb-6">Latest News</h3>
+            
+            <ul class="space-y-4 font-mono text-sm">
+               <li class="flex gap-4">
+                 <span class="text-terracotta whitespace-nowrap">> 07/2025</span>
+                 <span>
+                   Keynote at <a href="https://youtu.be/NWQ213fohnM?si=s_CpKIyw5b9JPCGV" target="_blank" class="underline decoration-terracotta underline-offset-2">Hymaday</a> on scaling AI assistants. Failures, learnings, and impact.
+                 </span>
+               </li>
+               <li class="flex gap-4">
+                 <span class="text-terracotta whitespace-nowrap">> 04/2024</span>
+                 <span>
+                   Talk: <a href="https://www.youtube.com/watch?v=tCiH311g_To" target="_blank" class="underline decoration-terracotta underline-offset-2">AI in Action</a>. A transparent look at how Dust helped solve real-world problems.
+                 </span>
+               </li>
+               <li class="flex gap-4 pt-4 mt-2 border-t border-dashed border-charcoal/20">
+                 <span class="text-terracotta whitespace-nowrap">> Fun Fact</span>
+                 <span class="italic font-serif text-charcoal/80">
+                   "My middle name is Claude. It was a tribute to my grandfather long before it was an LLM."
+                 </span>
+               </li>
+            </ul>
+          </div>
+          
+        </div>
+
+        <!-- Right Column (Links) - Spans 3 cols -->
+        <div class="md:col-span-3">
+          <h2 class="font-sans font-black text-2xl mb-6">Links</h2>
+          <ul class="font-mono text-base space-y-3">
+            <li>
+              <a href="https://www.linkedin.com/in/l%C3%A9o-martin-/" target="_blank" class="flex items-center justify-between group">
+                LinkedIn
+                <span class="link-arrow text-terracotta">&lt;</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://en.malt.fr/profile/n8n" target="_blank" class="flex items-center justify-between group">
+                Malt
+                <span class="link-arrow text-terracotta">&lt;</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/LeoMartin-30" target="_blank" class="flex items-center justify-between group">
+                GitHub
+                <span class="link-arrow text-terracotta">&lt;</span>
+              </a>
+            </li>
+          </ul>
+
+          <h2 class="font-sans font-black text-2xl mb-6 mt-16">Writing</h2>
+          <div class="font-mono text-sm opacity-60">
+            Work in progress. <br>
+            <span class="text-xs mt-2 block">Thoughts on the human side of automation coming soon.</span>
+          </div>
+          
+          <!-- Mobile Footer equivalent -->
+          <div class="mt-20 md:mt-40 text-xs font-mono opacity-40">
+            &copy; 2025 Léo Martin<br>
+            Designed with structure & warmth.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
