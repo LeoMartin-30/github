@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Léo Martin | AI & Automation Engineer</title>
     
-    <!-- Google Fonts: Playfair Display & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -34,12 +31,10 @@
         background-color: #F4F1EA;
         color: #282828;
       }
-      /* Custom dashed border for the news box */
       .dashed-box {
         background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='0' ry='0' stroke='%23282828' stroke-width='2' stroke-dasharray='8%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
         padding: 1.5rem;
       }
-      
       a {
         text-decoration: none;
         transition: color 0.2s;
@@ -47,8 +42,6 @@
       a:hover {
         color: #C17F59;
       }
-      
-      /* Link arrow animation */
       .link-arrow {
         display: inline-block;
         transition: transform 0.2s;
@@ -57,8 +50,6 @@
         transform: translateX(-4px);
         color: #C17F59;
       }
-
-      /* Scrollbar */
       ::-webkit-scrollbar { width: 8px; }
       ::-webkit-scrollbar-track { background: #F4F1EA; }
       ::-webkit-scrollbar-thumb { background: #D4D1CA; }
@@ -80,24 +71,17 @@
     
     <div class="max-w-7xl mx-auto px-6 py-12 md:py-20">
       
-      <!-- Grid Layout: 1 col mobile, 12 cols desktop -->
       <div class="grid grid-cols-1 md:grid-cols-12 gap-y-12 md:gap-x-16">
         
         <!-- Left Column (Profile & Contact) - Spans 3 cols -->
         <div class="md:col-span-3 flex flex-col gap-6">
-          <!-- Photo Area -->
-          <!-- 
-            RECOMMENDATION: Replace 'profile.jpg' with a real photo.
-            Style Tip: Black & White or desaturated warm colors work best with this palette.
-          -->
           <div class="w-full aspect-[4/5] bg-charcoal/10 relative overflow-hidden group rounded-sm">
-             <img 
+             <img
               src="Square Profile picture.jpg"
-              alt="Léo Martin" 
+              alt="Léo Martin"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
               class="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
              />
-             <!-- Fallback if no image found -->
              <div class="absolute inset-0 hidden items-center justify-center bg-charcoal/5 text-charcoal/20">
                 <span class="font-serif italic text-6xl">LM</span>
              </div>
@@ -118,10 +102,8 @@
           </div>
         </div>
 
-        <!-- Center Column (Main Content) - Spans 6 cols -->
+        <!-- Center Column - Spans 6 cols -->
         <div class="md:col-span-6 flex flex-col gap-12">
-          
-          <!-- About / Intro -->
           <div>
             <h2 class="font-sans font-black text-2xl mb-6">About.</h2>
             <p class="font-serif text-xl leading-relaxed mb-4">
@@ -131,8 +113,6 @@
               Engineered at Centrale Nantes & Audencia, refined at Harvard, and currently scaling AI at Malt. I scope, build, and deploy AI agents that actually work for people.
             </p>
           </div>
-
-          <!-- Experience List -->
           <div class="space-y-8">
             <div class="space-y-2">
               <h3 class="font-sans font-black text-xl">
@@ -161,37 +141,6 @@
               </p>
             </div>
           </div>
-
-          <!-- Projects Section -->
-          <div class="space-y-8">
-            <h2 class="font-sans font-black text-2xl">Projects.</h2>
-            
-            <div class="group">
-              <a href="https://github.com/LeoMartin-30" target="_blank" class="block">
-                <h3 class="font-sans font-bold text-lg group-hover:text-terracotta transition-colors inline-flex items-center gap-2">
-                  Strava Data Analysis
-                  <span class="text-xs font-mono font-normal opacity-50 border border-charcoal/20 px-1 rounded">Code</span>
-                </h3>
-                <p class="text-charcoal/80 mt-1">
-                  Exploratory data analysis of running patterns and performance metrics.
-                </p>
-              </a>
-            </div>
-
-            <div class="group">
-              <div class="block">
-                <h3 class="font-sans font-bold text-lg inline-flex items-center gap-2">
-                  AI Transcription Tool
-                  <span class="text-xs font-mono font-normal text-terracotta border border-terracotta/30 bg-terracotta/10 px-1 rounded animate-pulse">Building</span>
-                </h3>
-                <p class="text-charcoal/80 mt-1">
-                  A local-first transcription agent designed to automate meeting notes and extract action items securely.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Dashed News Box -->
           <div class="dashed-box mt-4 relative group hover:bg-white/40 transition-colors">
             <h3 class="font-sans font-black text-2xl mb-6">Latest News</h3>
             
@@ -219,8 +168,34 @@
           
         </div>
 
-        <!-- Right Column (Links) - Spans 3 cols -->
+        <!-- Right Column - Spans 3 cols -->
         <div class="md:col-span-3">
+          <h2 class="font-sans font-black text-2xl mb-6">Projects</h2>
+          <div class="space-y-6 mb-12">
+            <div class="group">
+              <a href="https://github.com/LeoMartin-30" target="_blank" class="block">
+                <h3 class="font-sans font-bold text-xl group-hover:text-terracotta transition-colors inline-flex items-center gap-2">
+                  Strava Data Analysis
+                  <span class="text-xs font-mono font-normal opacity-50 border border-charcoal/20 px-1 rounded">Code</span>
+                </h3>
+                <p class="text-charcoal/80 mt-2 text-sm leading-relaxed">
+                  A comprehensive exploratory data analysis of 5+ years of running data. Uncovering patterns in training volume, pace evolution, and performance metrics to optimize training strategies.
+                </p>
+              </a>
+            </div>
+            <div class="group">
+              <div class="block">
+                <h3 class="font-sans font-bold text-lg inline-flex items-center gap-2">
+                  AI Transcription Tool
+                  <span class="text-xs font-mono font-normal text-terracotta border border-terracotta/30 bg-terracotta/10 px-1 rounded animate-pulse">Building</span>
+                </h3>
+                <p class="text-charcoal/80 mt-1 text-sm leading-relaxed">
+                  A local-first transcription agent designed to automate meeting notes and extract action items securely.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <h2 class="font-sans font-black text-2xl mb-6">Links</h2>
           <ul class="font-mono text-base space-y-3">
             <li>
@@ -248,8 +223,6 @@
             Work in progress. <br>
             <span class="text-xs mt-2 block">Thoughts on the human side of automation coming soon.</span>
           </div>
-          
-          <!-- Mobile Footer equivalent -->
           <div class="mt-20 md:mt-40 text-xs font-mono opacity-40">
             &copy; 2025 Léo Martin<br>
             Designed with structure & warmth.
